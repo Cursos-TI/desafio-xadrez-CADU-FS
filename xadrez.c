@@ -4,6 +4,7 @@ int main() {
   // Variáveis que armazenam o movimento das peças
   char cima[5] = "Cima";
   char esquerda[9] = "Esquerda";
+  char baixo[6] = "Baixo";
   char direita[8] = "Direita";
 
   // Movimenta a Torre cinco casas para a direita
@@ -35,6 +36,22 @@ int main() {
 
     j++;
   } while (j < 8);
+
+  printf("\n");
+
+  // Movimenta o Cavalo duas casas para baixo e uma casa para esquerda
+  // A variável j é reinicializada e reutilizada como variável de controle da estrutura de repetição while
+  // O while será executado apenas uma vez pois a variável de controle passa do limite da condição
+  // O for imprime o movimento para baixo uma vez por iteração, totalizando 2 movimentos
+  j = 0;
+  printf("Movimento do Cavalo duas casas para baixo e uma casa para esquerda:\n");
+  while(j == 0) {
+    for(int i = 0; i <= 1; i++) {
+      printf("%s\n", baixo);
+    }
+    printf("%s\n", esquerda);
+    j++;
+  }
 
   return 0;
 }
